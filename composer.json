@@ -1,5 +1,5 @@
 {
-    "name": "opis/closure",
+    "name": "charescape/serialize-closure",
     "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
     "license": "MIT",
     "keywords": [
