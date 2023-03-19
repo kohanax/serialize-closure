@@ -675,15 +675,4 @@ class SerializableClosure implements Serializable
         }
     }
 
-    #[\ReturnTypeWillChange]
-    public function __serialize()
-    {
-        // TODO: Implement __serialize() method.
-    }
-
-    #[\ReturnTypeWillChange]
-    public function __unserialize(array $data)
-    {
-        // TODO: Implement __unserialize() method.
-    }
 }
