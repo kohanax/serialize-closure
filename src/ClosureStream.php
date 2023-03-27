@@ -14,6 +14,8 @@ class ClosureStream
 {
     const STREAM_PROTO = 'closure';
 
+    public $context;
+
     protected static $isRegistered = false;
 
     protected $content;
