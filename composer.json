@@ -20,6 +20,9 @@
             "email": "sarca_sorin@hotmail.com"
         }
     ],
+    "replace": {
+        "opis/closure": "*"
+    },
     "homepage": "https://opis.io/closure",
     "require": {
         "php": "^5.4 || ^7.0 || ^8.0"
