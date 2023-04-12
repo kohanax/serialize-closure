@@ -99,7 +99,7 @@ The full documentation for this library can be found [here][documentation].
 command line interface by using [Composer]. 
 
 ```bash
-composer require opis/closure
+composer require charescape/serialize-closure
 ```
 
 Or you could directly reference it into your `composer.json` file as a dependency
@@ -107,7 +107,7 @@ Or you could directly reference it into your `composer.json` file as a dependenc
 ```json
 {
     "require": {
-        "opis/closure": "^3.5"
+        "charescape/serialize-closure": "^3.8"
     }
 }
 ```
@@ -132,7 +132,7 @@ So our advice regarding the `Opis\Closure\serialize|unserialize` functions is to
 
 [documentation]: https://www.opis.io/closure "Opis Closure"
 [license]: http://opensource.org/licenses/MIT "MIT License"
-[Packagist]: https://packagist.org/packages/opis/closure "Packagist"
+[Packagist]: https://packagist.org/packages/charescape/serialize-closure "Packagist"
 [Composer]: https://getcomposer.org "Composer"
 [SemVer]: http://semver.org/ "Semantic versioning"
-[CHANGELOG]: https://github.com/opis/closure/blob/master/CHANGELOG.md "Changelog"
+[CHANGELOG]: https://github.com/charescape/serialize-closure/blob/master/CHANGELOG.md "Changelog"
