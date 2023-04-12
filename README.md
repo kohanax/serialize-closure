@@ -8,17 +8,47 @@ Opis Closure
 # Differences compared to the original version
 
 - Installs as a replacement of [opis/closure](https://github.com/opis/closure) package, 
-uses the same namespaces and classes:
-  > composer remove opis/closure<br />
-  > composer require charescape/serialize-closure
+uses the same namespaces and classes
+```bash
+ composer require charescape/serialize-closure
+```
+
+_If you require `opis/closure` directly in your root composer.json, you have to remove it first_
+```bash
+composer remove opis/closure
+```
 - Added support for PHP 8.0, 8.1, 8.2
 - Fixed deprecations:
   - [PHP 8.1: Serializable interface deprecated](https://php.watch/versions/8.1/serializable-deprecated)
-    - In order to fix this, the `SerializableClosure` produces a different serialization format,
-      which is not compatible with the original `Opis\Closure\SerializableClosure` class. <br />
-      <b>If you have serialized closures in your database or files, you will need to re-serialize them.</b>
   - [PHP 8.2: Dynamic Properties are deprecated](https://php.watch/versions/8.2/dynamic-properties-deprecated)
 
+### Backward incompatible changes
+
+##### 1. Serialization format and `SerializableClosure` class API
+
+> **TLDR:** You are affected ONLY if you either:
+> - Used `JsonSerializableClosure`
+> - Signed closures with `SerializableClosure::setSecretKey()`
+> - Extended `SerializableClosure` or `JsonSerializableClosure` classes
+
+The [PHP 8.1: Serializable interface deprecation](https://php.watch/versions/8.1/serializable-deprecated)
+forces us to implement the `__serialize(): array` and `__unserialize(array $data): void` methods.
+
+Since PHP 7.4, when a class gets these magic methods implemented, the `Serializable::serialize(): string` 
+and `Serialize::unserialize(): void` are not called anymore. Check out the following example, to understand
+how the output looks [with](https://3v4l.org/JmIRQ) and [without](https://3v4l.org/Tp4UF)
+the `__serialize` and `__unserialize` methods implemented.
+
+It means we can only build the data array we want PHP to serialize to a string, but we can't build the string
+ourselves to include a signature there. This is why we had to change the serialization format for 
+the `JsonSerializableClosure` class and the `SerializableClosure` when signature verification is enabled.
+
+Action points, if you are affected:
+1. If you have serialized closures saved in your database, caches or files – you will need to re-serialize them.
+2. If you have extended `SerializableClosure` or `JsonSerializableClosure` classes, you will need to review
+your code and make the necessary changes.
+
+___
 ___
 
 Serializable closures
