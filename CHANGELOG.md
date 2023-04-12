@@ -7,6 +7,8 @@ CHANGELOG
 
 **Full Changelog**: https://github.com/charescape/serialize-closure/compare/3.7.0...3.8.0
 
+Version 3.8.0 contains **backward incompatible changes**, see [https://github.com/charescape/serialize-closure#backward-incompatible-changes](https://github.com/charescape/serialize-closure#backward-incompatible-changes) for more details.
+
 ### v3.7.0, 2023.03.28
 
 - Mark the package as a replacement of original opis/closure by @SilverFire [#7](https://github.com/charescape/serialize-closure/pull/7)
