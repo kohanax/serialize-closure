@@ -22,7 +22,7 @@ composer remove opis/closure
   - [PHP 8.1: Serializable interface deprecated](https://php.watch/versions/8.1/serializable-deprecated)
   - [PHP 8.2: Dynamic Properties are deprecated](https://php.watch/versions/8.2/dynamic-properties-deprecated)
 
-### Backward incompatible changes
+## Backward Incompatible Changes
 
 ##### 1. Serialization format and `SerializableClosure` class API
 
