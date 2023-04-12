@@ -1,6 +1,20 @@
 CHANGELOG
 ---------
 
+### v3.8.0, 2023.04.12
+
+- Fixed SerializeInterface deprecations by @SilverFire [#12](https://github.com/charescape/serialize-closure/pull/12)
+
+**Full Changelog**: https://github.com/charescape/serialize-closure/compare/3.7.0...3.8.0
+
+### v3.7.0, 2023.03.28
+
+- Mark the package as a replacement of original opis/closure by @SilverFire [#7](https://github.com/charescape/serialize-closure/pull/7)
+- Fixed deprecated dynamic property in ClosureStream by @gadezist in [#8](https://github.com/charescape/serialize-closure/pull/8)
+- Fixed deprecation warnings for PHP >= 8.1
+
+**Full Changelog**: [opis/closure...charescape:serialize-closure:3.7.0](https://github.com/opis/closure/compare/master...charescape:serialize-closure:3.7.0#files_bucket)
+
 ### v3.6.2, 2021.04.09
 
 - Fixed string interpolation
